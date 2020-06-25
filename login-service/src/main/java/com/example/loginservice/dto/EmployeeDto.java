@@ -7,6 +7,7 @@ public class EmployeeDto {
     private String department;
     private CharSequence password;
     private String manager_id;
+    private String designation;
 
     public String getUserId() {
         return userId;
@@ -56,6 +57,14 @@ public class EmployeeDto {
         this.manager_id = manager_id;
     }
 
+    public String getDesignation() {
+        return designation;
+    }
+
+    public void setDesignation(String designation) {
+        this.designation = designation;
+    }
+
     @Override
     public String toString() {
         return "EmployeeDto{" +
@@ -64,6 +73,7 @@ public class EmployeeDto {
                 ", lastName='" + lastName + '\'' +
                 ", department='" + department + '\'' +
                 ", manager_id='" + manager_id + '\'' +
+                ", designation='" + designation + '\'' +
                 '}';
     }
 }

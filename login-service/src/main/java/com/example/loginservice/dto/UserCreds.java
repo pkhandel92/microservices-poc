@@ -16,7 +16,7 @@ public class UserCreds {
         return password;
     }
 
-    public void setPassword(String password) {
+    public void setPassword(CharSequence password) {
         this.password = password;
     }
 }

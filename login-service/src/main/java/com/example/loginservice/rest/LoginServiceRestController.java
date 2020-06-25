@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import javax.servlet.http.HttpServletResponse;
+import javax.validation.Valid;
 import javax.ws.rs.core.MediaType;
 
 
@@ -27,8 +28,8 @@ public class LoginServiceRestController {
 
     @PostMapping(value = "/register",consumes = MediaType.APPLICATION_JSON,produces = MediaType.APPLICATION_JSON)
     @ResponseBody
-    public RegisterResponse register(@RequestBody EmployeeDto employeeDto, HttpServletResponse httpServletResponse){
-        logger.info("Employee Details recieved "+employeeDto);
+    public RegisterResponse register(@RequestBody @Valid EmployeeDto employeeDto, HttpServletResponse httpServletResponse){
+        logger.info("Employee Details recieved {}",employeeDto);
 
         return loginService.register(employeeDto);
     }
@@ -48,7 +49,7 @@ public class LoginServiceRestController {
     @PutMapping(value = "/update",consumes = MediaType.APPLICATION_JSON,produces = MediaType.APPLICATION_JSON)
     @ResponseBody
     public UpdateResponse updateUser(@RequestBody EmployeeDto employeeDto, HttpServletResponse response){
-        logger.info("Request to remove user {}",employeeDto.getUserId());
+        logger.info("Request to update user {}",employeeDto.getUserId());
         return loginService.update(employeeDto);
     }
 
