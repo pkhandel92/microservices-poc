@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1e4790ac-5c0e-4b3a-877a-e1b06948e596" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/feedback/poc/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/feedback/poc/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/feedback/poc/controller/FeedbackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/feedback/poc/controller/FeedbackController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/feedback/poc/service/FeedbackService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/feedback/poc/service/FeedbackService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FeedbackSystem-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/FeedbackSystem.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/feedback/poc/Application$RestTemplateConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/feedback/poc/Application.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/feedback/poc/controller/FeedbackController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/feedback/poc/domain/Rating.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/feedback/poc/domain/Response.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/feedback/poc/repository/RatingRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/feedback/poc/service/FeedbackService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../login-service/src/main/java/com/feedback/poc/loginservice/controller/LoginServiceRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../login-service/src/main/java/com/feedback/poc/loginservice/controller/LoginServiceRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../login-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../login-service/src/main/resources/application.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1dcMe8iQHjAuEYExitXRGjPShOv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="D:/Work/Projects/microservices-poc/login-service/src/main/java/com/feedback/poc/loginservice" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Work\Projects\microservices-poc\login-service\src\main\java\com\feedback\poc\loginservice" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.feedback.poc.loginservice.service" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.feedback.poc.domain" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Application">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.feedback.poc.Application" />
+      <module name="FeedbackSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.feedback.poc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.DemoApplication" />
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmployeeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.feedback.poc.domain.EmployeeTest" />
+      <module name="FeedbackSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.feedback.poc.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.feedback.poc.loginservice.LoginServiceApplication" />
+      <module name="login-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.feedback.poc.loginservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Application" />
+        <item itemvalue="Application.LoginServiceApplication" />
+        <item itemvalue="Application.DemoApplication" />
+        <item itemvalue="Application.EmployeeTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1e4790ac-5c0e-4b3a-877a-e1b06948e596" name="Default Changelist" comment="" />
+      <created>1592720020508</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1592720020508</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="458" y="223" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1593275335649">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="458" y="223" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1593275335649" />
+    <state width="501" height="466" key="DebuggerActiveHint" timestamp="1593284358844">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="501" height="466" key="DebuggerActiveHint/0.0.1440.900@0.0.1440.900" timestamp="1593284358844" />
+    <state width="1398" height="304" key="GridCell.Tab.0.bottom" timestamp="1593284278403">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="304" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1593284278403" />
+    <state width="1398" height="304" key="GridCell.Tab.0.bottom/0.23.1440.850@0.23.1440.850" timestamp="1593276148927" />
+    <state width="1398" height="304" key="GridCell.Tab.0.center" timestamp="1593284278402">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="304" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1593284278402" />
+    <state width="1398" height="304" key="GridCell.Tab.0.center/0.23.1440.850@0.23.1440.850" timestamp="1593276148922" />
+    <state width="1398" height="304" key="GridCell.Tab.0.left" timestamp="1593284278401">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="304" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1593284278401" />
+    <state width="1398" height="304" key="GridCell.Tab.0.left/0.23.1440.850@0.23.1440.850" timestamp="1593276148920" />
+    <state width="1398" height="304" key="GridCell.Tab.0.right" timestamp="1593284278402">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="304" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1593284278402" />
+    <state width="1398" height="304" key="GridCell.Tab.0.right/0.23.1440.850@0.23.1440.850" timestamp="1593276148925" />
+    <state width="1398" height="304" key="GridCell.Tab.1.bottom" timestamp="1593284272818">
+      <screen x="0" y="23" width="1440" height="850" />
+    </state>
+    <state width="1398" height="304" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1593284148971" />
+    <state width="1398" height="304" key="GridCell.Tab.1.bottom/0.23.1440.850@0.23.1440.850" timestamp="1593284272818" />
+    <state width="1398" height="304" key="GridCell.Tab.1.center" timestamp="1593284272815">
+      <screen x="0" y="23" width="1440" height="850" />
+    </state>
+    <state width="1398" height="304" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1593284148969" />
+    <state width="1398" height="304" key="GridCell.Tab.1.center/0.23.1440.850@0.23.1440.850" timestamp="1593284272815" />
+    <state width="1398" height="304" key="GridCell.Tab.1.left" timestamp="1593284272814">
+      <screen x="0" y="23" width="1440" height="850" />
+    </state>
+    <state width="1398" height="304" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1593284148967" />
+    <state width="1398" height="304" key="GridCell.Tab.1.left/0.23.1440.850@0.23.1440.850" timestamp="1593284272814" />
+    <state width="1398" height="304" key="GridCell.Tab.1.right" timestamp="1593284272816">
+      <screen x="0" y="23" width="1440" height="850" />
+    </state>
+    <state width="1398" height="304" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1593284148970" />
+    <state width="1398" height="304" key="GridCell.Tab.1.right/0.23.1440.850@0.23.1440.850" timestamp="1593284272816" />
+    <state width="720" height="450" key="XDebugger.FullValuePopup" timestamp="1593280071691">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="720" height="450" key="XDebugger.FullValuePopup/0.0.1440.900@0.0.1440.900" timestamp="1593280071691" />
+    <state x="420" y="207" width="600" height="486" key="find.popup" timestamp="1593275632735">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="420" y="207" width="600" height="486" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1593275632735" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1593264724371">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1593264724371" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/feedback/poc/repository/RatingRepository.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://D:/Work/Projects/microservices-poc/login-service/src/main/java/com/feedback/poc/loginservice/controller/LoginServiceRestController.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://D:/Work/Projects/microservices-poc/login-service/src/main/java/com/feedback/poc/loginservice/repository/LoginDao.java</url>
+          <line>91</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://D:/Work/Projects/microservices-poc/login-service/src/main/java/com/feedback/poc/loginservice/repository/LoginDao.java</url>
+          <line>77</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://D:/Work/Projects/microservices-poc/login-service/src/main/java/com/feedback/poc/loginservice/controller/TokenValidationController.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/feedback/poc/controller/FeedbackController.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

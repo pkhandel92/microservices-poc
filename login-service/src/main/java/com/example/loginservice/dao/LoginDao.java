@@ -1,10 +1,12 @@
 package com.example.loginservice.dao;
 
 import com.example.loginservice.dto.EmployeeDto;
-import com.example.loginservice.response.LoginResponse;
-import com.example.loginservice.response.UpdateResponse;
 import com.example.loginservice.dto.UserCreds;
 import com.example.loginservice.response.RegisterResponse;
+import com.example.loginservice.response.UpdateResponse;
+import com.example.loginservice.rest.LoginServiceRestController;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -14,6 +16,18 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public class LoginDao {
+    private static final Logger logger= LoggerFactory.getLogger(LoginDao.class);
+    private final String VALID_EMPLOYEE = "select count(*) from feedback.employee where employee_id = ?";
+    private final String CREATE_LOGIN = "insert into feedback.login (user_id,password) values(?,?)";
+    private final String CREATE_EMPLOYEE = "insert into feedback.employee (employee_id, first_name, last_name, designation, manager_id) values(?,?,?,?,?)";
+    private final String VALIDATE_LOGIN = "select password from feedback.login where user_id=?";
+    private final String DELETE_LOGIN = "delete from feedback.login where user_id=?";
+    private final String DELETE_RATING = "delete from feedback.rating where employee_id=?";
+    private final String DELETE_EMPLOYEE = "delete from feedback.employee where employee_id=?";
+    private final String UPDATE_LOGIN = "update feedback.login set password =? where user_id=?";
+    private final String UPDATE_EMPLOYEE = "update feedback.employee set first_name=?,last_name=?,designation=?, manager_id=? where employee_id=?";
+    private final String FETCH_EMPLOYEE = "select employee_id, first_name, last_name, designation, manager_id from feedback.employee where employee_id=?";
+
     @Autowired
     private final JdbcTemplate jdbcTemplate;
 
@@ -26,55 +40,69 @@ public class LoginDao {
         this.jdbcTemplate = jdbcTemplate;
     }
 
-    public RegisterResponse register(EmployeeDto employeeDto) {
+    /**
+     *
+     * @param employee
+     * @return
+     */
+    public RegisterResponse register(EmployeeDto employee)
+    {
         RegisterResponse response = new RegisterResponse();
-        Integer count = (Integer) jdbcTemplate.queryForObject(
-                "select count(*)from Login where user_id=?", new Object[]{employeeDto.getManager_id()}, Integer.class);
-        if(count==0){
+        Integer count = jdbcTemplate.queryForObject(VALID_EMPLOYEE, new Object[]{employee.getManager_id()}, Integer.class);
+        if(count == 0){
             response.setResponse("Manager id is invalid");
             response.setStatus(-1);
+            return response;
         }
-        int loginTableStatus = jdbcTemplate.update("insert into login ( user_id ,password) values(?,?)", employeeDto.getUserId(), passwordEncoder().encode(employeeDto.getPassword()));
-        int ratingTableStatus = jdbcTemplate.update("insert into rating (user_id,manager_id) values(?,?)", employeeDto.getUserId(), employeeDto.getManager_id());
-        int employeeTableStatus=jdbcTemplate.update("insert into employee (user_id,firstName,LastName,department,designation) values(?,?,?,?,?)" ,employeeDto.getUserId(),employeeDto.getFirstName(),employeeDto.getLastName(),employeeDto.getDepartment(),employeeDto.getDesignation());
-        int result = loginTableStatus & ratingTableStatus&employeeTableStatus;
+        int loginTableStatus = jdbcTemplate.update(CREATE_LOGIN, employee.getUserId(), passwordEncoder().encode(employee.getPassword()));
+
+        int employeeTableStatus = jdbcTemplate.
+                update(CREATE_EMPLOYEE, employee.getUserId(), employee.getFirstName(),
+                        employee.getLastName(), employee.getDesignation(), employee.getManager_id());
+
+        int result = loginTableStatus & employeeTableStatus;
         response.setResponse(result == 1 ? "Success" : "Failure");
         response.setStatus(result);
         return response;
     }
 
-    public LoginResponse login(UserCreds userCreds) {
-        String sql = "select password from Login where user_id=?";
-        String password = (String) jdbcTemplate.queryForObject(
-                sql, new Object[]{userCreds.getUsername()}, String.class);
-        LoginResponse loginResponse = new LoginResponse();
-        loginResponse.setStatus(passwordEncoder().matches(userCreds.getPassword(), password) ? "Success" : "Failure");
-        return loginResponse;
-    }
-    public String removeUser(UserCreds userCreds) {
-        int loginRemoveStatus = jdbcTemplate.update("delete from login where user_id=?", userCreds.getUsername());
-        int ratingRemoveStatus = jdbcTemplate.update("delete from rating where user_id=?", userCreds.getUsername());
-        int employeeRemoveStatus = jdbcTemplate.update("delete from employee where user_id=?", userCreds.getUsername());
-        return (loginRemoveStatus & ratingRemoveStatus&employeeRemoveStatus) == 1 ? "User removed successfully" : "Error during removing user";
+    /**
+     *
+     * @param userCredential
+     * @return
+     */
+    public Boolean login(UserCreds userCredential) {
+        String password = jdbcTemplate.queryForObject(VALIDATE_LOGIN, new Object[]{userCredential.getUsername()}, String.class);
+        return passwordEncoder().matches(userCredential.getPassword(), password);
     }
 
-    public UpdateResponse updateUser(EmployeeDto employeeDto) {
-      /**Assumption is that user has already logged in and hence updating
-       * thus no check for login
-        UserCreds userCreds=new UserCreds();
-        userCreds.setPassword(employeeDto.getPassword());
-        userCreds.setUsername(employeeDto.getUserId());*/
-        int loginStatus = jdbcTemplate.update("update login set password =? where user_id=?", passwordEncoder().encode(employeeDto.getPassword()), employeeDto.getUserId());
-        int employeeStatus = jdbcTemplate.update("update employee set firstName=?,lastName=?,department=?,designation=? where user_id=?", employeeDto.getFirstName(), employeeDto.getLastName(), employeeDto.getDepartment(),employeeDto.getDesignation(),employeeDto.getUserId());
-        int ratingStatus=jdbcTemplate.update("update rating set manager_id=? where user_id=?",employeeDto.getManager_id(),employeeDto.getUserId());
-        int result = loginStatus & ratingStatus&employeeStatus&employeeStatus;
+    public String removeUser(UserCreds userCredential) {
+        int loginRemoveStatus = jdbcTemplate.update(DELETE_LOGIN, userCredential.getUsername());
+        int ratingRemoveStatus = jdbcTemplate.update(DELETE_RATING, userCredential.getUsername());
+        int employeeRemoveStatus = jdbcTemplate.update(DELETE_EMPLOYEE, userCredential.getUsername());
+
+        return (loginRemoveStatus  & employeeRemoveStatus) == 1 ?
+                "User removed successfully" : "Error during removing user";
+    }
+
+    /**
+     *
+     * @param employee
+     * @return
+     */
+    public UpdateResponse updateUser(EmployeeDto employee) {
         UpdateResponse response = new UpdateResponse();
+        int loginStatus = jdbcTemplate.update(UPDATE_LOGIN, passwordEncoder().encode(employee.getPassword()), employee.getUserId());
+        int employeeStatus = jdbcTemplate.update(UPDATE_EMPLOYEE, employee.getFirstName(), employee.getLastName(),
+                employee.getDesignation(), employee.getManager_id(), employee.getUserId());
+
+        int result = loginStatus & employeeStatus&employeeStatus;
+
         if (result == 1) {
-            response.setEmployeeDto(employeeDto);
+            response.setEmployeeDto(employee);
             response.setUpdateStatus("Updated");
         } else {
-            response.setUpdateStatus("No user with mentioned user_id "+employeeDto.getUserId());
-            //throw Exception
+            response.setUpdateStatus("No user with mentioned user_id "+ employee.getUserId());
         }
         return response;
     }
